@@ -511,6 +511,12 @@ ul { list-style: none; }
 .form-submit > * { position: relative; z-index: 1; }
 .form-submit:hover::before { opacity: 1; }
 .form-submit:hover { transform: translateY(-2px); box-shadow: var(--shadow-glow); }
+.form-submit[disabled] { opacity: 0.7; cursor: not-allowed; transform: none; }
+.form-submit[disabled]:hover { transform: none; box-shadow: none; }
+.form-input.is-invalid, .form-textarea.is-invalid, .form-select.is-invalid { border-color: var(--accous-red); background: #FFF5F5; }
+.form-feedback { font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem; padding: 0; border-radius: var(--r-sm); display: none; }
+.form-feedback.is-success { display: block; padding: 0.9rem 1rem; background: #E8F7EE; color: #1B7A3F; border: 1px solid #8FD1A7; }
+.form-feedback.is-error { display: block; padding: 0.9rem 1rem; background: #FFF0F0; color: #B91C1C; border: 1px solid #F5A5A5; }
 
 @media (max-width: 992px) { .final-cta-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } .contact-form { padding: 2rem 1.5rem; } }
 
@@ -1234,59 +1240,62 @@ ul { list-style: none; }
           </div>
         </div>
 
-        <div class="contact-form reveal reveal-delay-1">
+        <form class="contact-form reveal reveal-delay-1" id="accous-contact-form" novalidate>
           <h3 class="form-title">Fale com a Accous</h3>
           <p class="form-subtitle">Resposta direta da Thalita em até 1 dia útil.</p>
 
           <div class="form-row">
             <div class="form-group">
-              <label class="form-label">Nome *</label>
-              <input type="text" class="form-input" placeholder="Seu nome completo">
+              <label class="form-label" for="cf-nome">Nome *</label>
+              <input id="cf-nome" name="nome" type="text" class="form-input" placeholder="Seu nome completo" required autocomplete="name">
             </div>
             <div class="form-group">
-              <label class="form-label">Empresa *</label>
-              <input type="text" class="form-input" placeholder="Razão social ou fantasia">
+              <label class="form-label" for="cf-empresa">Empresa / CNPJ *</label>
+              <input id="cf-empresa" name="empresa" type="text" class="form-input" placeholder="Razão social ou CNPJ" required autocomplete="organization">
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label class="form-label">E-mail *</label>
-              <input type="email" class="form-input" placeholder="seu@email.com">
+              <label class="form-label" for="cf-email">E-mail *</label>
+              <input id="cf-email" name="email" type="email" class="form-input" placeholder="seu@email.com" required autocomplete="email">
             </div>
             <div class="form-group">
-              <label class="form-label">WhatsApp *</label>
-              <input type="tel" class="form-input" placeholder="(00) 00000-0000">
+              <label class="form-label" for="cf-whatsapp">WhatsApp *</label>
+              <input id="cf-whatsapp" name="whatsapp" type="tel" class="form-input" placeholder="(00) 00000-0000" required autocomplete="tel">
             </div>
           </div>
 
           <div class="form-group">
-            <label class="form-label">Segmento</label>
-            <select class="form-select">
-              <option>Selecione seu segmento</option>
-              <option>Entretenimento e poker</option>
-              <option>Prestadores de serviço</option>
-              <option>Profissionais Liberais</option>
-              <option>Indústria e comércio</option>
-              <option>Outro</option>
+            <label class="form-label" for="cf-setor">Setor de atuação *</label>
+            <select id="cf-setor" name="setor" class="form-select" required>
+              <option value="" disabled selected>Selecione seu setor</option>
+              <option value="Comércio">Comércio</option>
+              <option value="Indústria">Indústria</option>
+              <option value="Serviços">Serviços</option>
+              <option value="Entretenimento">Entretenimento</option>
+              <option value="Profissional Liberal">Profissional Liberal</option>
+              <option value="Outro">Outro</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label class="form-label">Mensagem *</label>
-            <textarea class="form-textarea" placeholder="Conte brevemente o contexto da sua empresa e o que você busca."></textarea>
+            <label class="form-label" for="cf-mensagem">Mensagem *</label>
+            <textarea id="cf-mensagem" name="mensagem" class="form-textarea" placeholder="Conte brevemente o contexto da sua empresa e o que você busca." required></textarea>
           </div>
 
           <label class="form-check">
-            <input type="checkbox">
+            <input type="checkbox" name="lgpd" required>
             <span>Autorizo o uso dos meus dados para retorno sobre este contato, conforme a <a href="#">Política de Privacidade</a> da Accous.</span>
           </label>
 
-          <button type="button" class="form-submit">
-            <span>Enviar mensagem</span>
+          <div class="form-feedback" id="cf-feedback" role="status" aria-live="polite"></div>
+
+          <button type="submit" class="form-submit" id="cf-submit">
+            <span class="cf-submit-label">Enviar mensagem</span>
             <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-right"/></svg>
           </button>
-        </div>
+        </form>
       </div>
     </div>
   </section>
@@ -1430,6 +1439,88 @@ window.addEventListener('scroll', () => {
     waTooltipShown = true;
   }
 }, { passive: true });
+
+// Contact form submission
+(function () {
+  const form = document.getElementById('accous-contact-form');
+  if (!form) return;
+
+  const feedback = document.getElementById('cf-feedback');
+  const submitBtn = document.getElementById('cf-submit');
+  const submitLabel = submitBtn.querySelector('.cf-submit-label');
+  const originalLabel = submitLabel.textContent;
+
+  const setFeedback = (type, message) => {
+    feedback.classList.remove('is-success', 'is-error');
+    if (type) feedback.classList.add('is-' + type);
+    feedback.textContent = message || '';
+  };
+
+  const requiredFields = ['nome', 'empresa', 'email', 'whatsapp', 'setor', 'mensagem'];
+
+  const validate = (data) => {
+    const invalid = [];
+    requiredFields.forEach((name) => {
+      const el = form.elements[name];
+      if (!el) return;
+      el.classList.remove('is-invalid');
+      if (!String(data[name] || '').trim()) {
+        el.classList.add('is-invalid');
+        invalid.push(name);
+      }
+    });
+    const email = String(data.email || '').trim();
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      form.elements.email.classList.add('is-invalid');
+      if (!invalid.includes('email')) invalid.push('email');
+    }
+    if (!data.lgpd) invalid.push('lgpd');
+    return invalid;
+  };
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    setFeedback(null, '');
+
+    const fd = new FormData(form);
+    const data = Object.fromEntries(fd.entries());
+    data.lgpd = form.elements.lgpd.checked;
+
+    const invalid = validate(data);
+    if (invalid.length > 0) {
+      setFeedback('error', 'Preencha todos os campos obrigatórios e aceite a Política de Privacidade.');
+      const firstInvalid = form.querySelector('.is-invalid');
+      if (firstInvalid) firstInvalid.focus();
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitLabel.textContent = 'Enviando...';
+
+    try {
+      const res = await fetch('/api/contato', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const result = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(result.error || 'Falha ao enviar');
+
+      setFeedback('success', 'Mensagem enviada! A Thalita responderá em até 1 dia útil.');
+      form.reset();
+    } catch (err) {
+      setFeedback('error', 'Não foi possível enviar agora. Tente pelo WhatsApp: (31) 9 9228-0076.');
+    } finally {
+      submitBtn.disabled = false;
+      submitLabel.textContent = originalLabel;
+    }
+  });
+
+  form.querySelectorAll('.form-input, .form-textarea, .form-select').forEach((el) => {
+    el.addEventListener('input', () => el.classList.remove('is-invalid'));
+    el.addEventListener('change', () => el.classList.remove('is-invalid'));
+  });
+})();
 </script>
 
 </body>
