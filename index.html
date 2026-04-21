@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contabilidade digital premium com monitoramento fiscal em tempo real. Atendemos prestadores de serviço, profissionais liberais e entretenimento em todo o Brasil. Certificado digital 60% mais barato e emissão de NF-e ilimitada grátis para clientes.">
+<meta name="keywords" content="contabilidade digital, contabilidade premium, profissionais liberais, prestadores de serviço, planejamento tributário, reforma tributária, IBS CBS, monitoramento fiscal, certificado digital">
+<meta name="author" content="Accous">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2B2929">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Accous · Contabilidade digital premium para serviços e profissionais liberais">
+<meta property="og:description" content="Monitoramento fiscal em tempo real, atendimento direto com a CEO e tecnologia proprietária. Sem atendente, sem roteiro.">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://accous.com.br">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Accous · Contabilidade digital premium">
+<meta name="twitter:description" content="Contabilidade que trabalha antes de você precisar. Monitoramento fiscal em tempo real e atendimento direto com a CEO.">
+
+<!-- Preload de fontes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "Accous",
+  "description": "Contabilidade digital premium com atendimento em todo o Brasil",
+  "url": "https://accous.com.br",
+  "telephone": "+5531992280076",
+  "email": "contato@accous.com.br",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Fausto Alvim, 371, Sala 4403",
+    "addressLocality": "Belo Horizonte",
+    "addressRegion": "MG",
+    "addressCountry": "BR"
+  },
+  "areaServed": "BR",
+  "priceRange": "$$$",
+  "slogan": "be wise"
+}
+</script>
+
+<title>Accous · Contabilidade digital premium | be wise</title>
+
+<style>
+/* ============================================
+   ACCOUS — Design System Tokens
+   ============================================ */
+:root {
+  /* Brand colors */
+  --accous-red: #FF4141;
+  --accous-orange: #FFAA56;
+  --accous-cream: #FDF2DD;
+  --accous-graphite: #2B2929;
+
+  /* Signature gradient */
+  --accous-gradient: linear-gradient(135deg, #FFAA56 0%, #FF4141 100%);
+  --accous-gradient-soft: linear-gradient(135deg, rgba(255, 170, 86, 0.08) 0%, rgba(255, 65, 65, 0.08) 100%);
+
+  /* Neutrals */
+  --white: #FFFFFF;
+  --cream-50: #FEFBF3;
+  --cream-100: #FDF2DD;
+  --cream-200: #F5E6C8;
+  --gray-100: #F4F4F4;
+  --gray-200: #E5E5E5;
+  --gray-400: #9CA3AF;
+  --gray-500: #6B7280;
+  --gray-700: #374151;
+  --gray-900: #111111;
+
+  /* Typography */
+  --font-display: 'Manrope', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing */
+  --section-py: clamp(4rem, 8vw, 7rem);
+  --container-px: clamp(1.25rem, 5vw, 4rem);
+  --max-width: 1280px;
+
+  /* Radius */
+  --r-sm: 8px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-xl: 32px;
+  --r-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 6px -1px rgba(43, 41, 41, 0.05);
+  --shadow-md: 0 10px 24px rgba(43, 41, 41, 0.08);
+  --shadow-lg: 0 20px 60px rgba(43, 41, 41, 0.12);
+  --shadow-glow: 0 15px 35px rgba(255, 65, 65, 0.2);
+
+  /* Easings premium */
+  --ease-smooth: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ============================================
+   Reset & Base
+   ============================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--accous-graphite); background: var(--white); overflow-x: hidden; }
+img, svg { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+input, textarea, select { font-family: inherit; font-size: inherit; }
+ul { list-style: none; }
+
+/* ============================================
+   Typography Scale
+   ============================================ */
+.display-1 { font-family: var(--font-display); font-size: clamp(2.5rem, 5.8vw, 4.25rem); line-height: 1.05; letter-spacing: -0.03em; font-weight: 700; }
+.display-2 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.05; letter-spacing: -0.025em; font-weight: 700; }
+.display-3 { font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.75rem); line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; }
+.h4 { font-family: var(--font-display); font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.3; letter-spacing: -0.01em; font-weight: 600; }
+
+.eyebrow { font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accous-red); display: inline-flex; align-items: center; gap: 0.75rem; }
+.eyebrow::before { content: ""; width: 24px; height: 2px; background: var(--accous-red); }
+
+.lead { font-family: var(--font-body); font-size: clamp(1.0625rem, 1.5vw, 1.25rem); line-height: 1.6; color: var(--gray-700); font-weight: 400; }
+
+/* ============================================
+   Layout utilities
+   ============================================ */
+.container { max-width: var(--max-width); margin: 0 auto; padding-left: var(--container-px); padding-right: var(--container-px); }
+.section { padding-top: var(--section-py); padding-bottom: var(--section-py); position: relative; }
+
+/* ============================================
+   Buttons
+   ============================================ */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.625rem;
+  padding: 0.95rem 1.75rem; font-family: var(--font-display); font-size: 0.95rem; font-weight: 600;
+  border-radius: var(--r-pill); transition: all 0.4s var(--ease-smooth); position: relative; overflow: hidden; z-index: 1;
+}
+.btn-primary { background: var(--accous-graphite); color: var(--white); }
+.btn-primary::before {
+  content: ""; position: absolute; inset: 0; background: var(--accous-gradient);
+  opacity: 0; transition: opacity 0.4s var(--ease-smooth); z-index: -1;
+}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: var(--shadow-glow); }
+.btn-primary:hover::before { opacity: 1; }
+
+.btn-secondary { background: transparent; color: var(--accous-graphite); border: 2px solid var(--accous-graphite); }
+.btn-secondary:hover { background: var(--accous-graphite); color: var(--white); transform: translateY(-3px); }
+
+.btn-arrow { transition: transform 0.3s var(--ease-smooth); }
+.btn:hover .btn-arrow { transform: translateX(5px); }
+
+/* ============================================
+   Animations
+   ============================================ */
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+@keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(255, 65, 65, 0.4); } 50% { box-shadow: 0 0 0 12px rgba(255, 65, 65, 0); } }
+
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s var(--ease-smooth), transform 0.8s var(--ease-smooth); will-change: transform, opacity; }
+.reveal.in-view { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 1rem 0; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid transparent; transition: all 0.4s var(--ease-smooth);
+}
+.navbar.scrolled { padding: 0.75rem 0; border-bottom-color: rgba(0,0,0,0.06); background: rgba(255, 255, 255, 0.98); box-shadow: var(--shadow-sm); }
+
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.nav-brand { display: flex; align-items: center; gap: 0.625rem; }
+.nav-brand-icon { width: 36px; height: 36px; }
+.nav-brand-text { display: flex; flex-direction: column; line-height: 1; }
+.nav-brand-name { font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; letter-spacing: -0.02em; color: var(--accous-graphite); }
+.nav-brand-tag { font-family: var(--font-display); font-size: 0.625rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accous-red); margin-top: 2px; }
+
+.nav-menu { display: flex; align-items: center; gap: 2.25rem; }
+.nav-link { font-family: var(--font-display); font-size: 0.9375rem; font-weight: 600; color: var(--accous-graphite); transition: color 0.2s ease; position: relative; }
+.nav-link::after { content: ""; position: absolute; left: 0; bottom: -4px; width: 0; height: 2px; background: var(--accous-gradient); transition: width 0.3s ease; }
+.nav-link:hover { color: var(--accous-red); }
+.nav-link:hover::after { width: 100%; }
+
+.nav-cta { padding: 0.75rem 1.25rem; font-size: 0.875rem; }
+.nav-mobile-toggle { display: none; width: 44px; height: 44px; flex-direction: column; justify-content: center; align-items: center; gap: 5px; }
+.nav-mobile-toggle span { width: 24px; height: 2px; background: var(--accous-graphite); transition: all 0.3s ease; }
+
+/* Menu Mobile Overlay */
+.mobile-menu { position: fixed; inset: 0; z-index: 200; background: var(--white); padding: 5rem var(--container-px) 2rem; display: flex; flex-direction: column; opacity: 0; pointer-events: none; transform: translateY(-20px); transition: all 0.4s var(--ease-smooth); }
+.mobile-menu.active { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.mobile-menu-close { position: absolute; top: 1.25rem; right: var(--container-px); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: var(--accous-graphite); }
+.mobile-menu ul { display: flex; flex-direction: column; margin-bottom: 2rem; }
+.mobile-menu ul a { display: block; padding: 1.25rem 0; font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--accous-graphite); border-bottom: 1px solid rgba(0,0,0, 0.05); }
+.mobile-menu ul a:hover { color: var(--accous-red); }
+.mobile-menu-cta { width: 100%; margin-top: auto; }
+
+@media (max-width: 992px) { .nav-menu, .nav-cta-desktop { display: none; } .nav-mobile-toggle { display: flex; } }
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero { padding-top: calc(var(--section-py) + 80px); padding-bottom: var(--section-py); position: relative; overflow: hidden; background: var(--cream-50); }
+.hero-bg-pattern { position: absolute; top: -10%; right: -15%; width: 60%; height: 120%; opacity: 0.04; pointer-events: none; z-index: 0; }
+.hero-gradient-blob { position: absolute; top: 20%; right: -10%; width: 500px; height: 500px; background: var(--accous-gradient); opacity: 0.12; filter: blur(120px); border-radius: 50%; pointer-events: none; z-index: 0; animation: float 12s ease-in-out infinite; }
+
+.hero-inner { display: grid; grid-template-columns: 1.15fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 1; }
+.hero-content > * + * { margin-top: 1.5rem; }
+.hero-title em { font-style: normal; background: var(--accous-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2.5rem !important; }
+
+.hero-proof { margin-top: 3rem !important; display: flex; align-items: center; gap: 1.25rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0, 0.08); flex-wrap: wrap; }
+.hero-proof-stat { display: flex; flex-direction: column; }
+.hero-proof-number { font-family: var(--font-display); font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em; color: var(--accous-graphite); line-height: 1; }
+.hero-proof-label { font-size: 0.8125rem; color: var(--gray-500); margin-top: 4px; font-weight: 500; }
+.hero-proof-divider { width: 1px; height: 36px; background: rgba(0,0,0, 0.1); }
+
+.hero-visual { position: relative; aspect-ratio: 4/5; border-radius: var(--r-xl); overflow: hidden; background: var(--accous-graphite); box-shadow: var(--shadow-lg); transform: perspective(1000px) rotateY(-5deg); transition: transform 0.5s var(--ease-smooth); }
+.hero-visual:hover { transform: perspective(1000px) rotateY(0deg); }
+.hero-visual-placeholder { position: absolute; inset: 0; background: linear-gradient(135deg, #2B2929 0%, #4A3838 100%); display: flex; flex-direction: column; justify-content: space-between; padding: 2rem; }
+.hero-visual-placeholder::before { content: ""; position: absolute; top: -20%; right: -20%; width: 80%; height: 80%; background: var(--accous-gradient); opacity: 0.35; filter: blur(80px); border-radius: 50%; }
+
+.hero-visual-tag { position: relative; z-index: 1; align-self: flex-start; padding: 0.375rem 0.75rem; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: var(--r-pill); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+.hero-visual-desc { position: relative; z-index: 1; color: rgba(255, 255, 255, 0.9); font-family: var(--font-display); font-size: 0.875rem; line-height: 1.5; padding: 1rem; background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--r-md); backdrop-filter: blur(12px); }
+.hero-visual-desc-label { display: block; font-size: 0.625rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accous-orange); margin-bottom: 0.375rem; font-weight: 700; }
+
+.hero-floating-card { position: absolute; left: -1.5rem; bottom: 15%; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); padding: 1rem 1.25rem; border-radius: var(--r-md); box-shadow: var(--shadow-md); display: flex; align-items: center; gap: 0.75rem; z-index: 2; animation: float 6s ease-in-out infinite; }
+.hero-floating-card-icon { width: 36px; height: 36px; border-radius: var(--r-sm); background: var(--accous-gradient); display: flex; align-items: center; justify-content: center; color: white; }
+.hero-floating-card-title { font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: var(--accous-graphite); }
+.hero-floating-card-sub { font-family: var(--font-body); font-size: 0.7rem; color: var(--gray-500); margin-top: 2px; }
+
+@media (max-width: 992px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+  .eyebrow { justify-content: center; }
+  .hero-ctas, .hero-proof { justify-content: center; }
+  .hero-visual { aspect-ratio: 16/9; max-width: 600px; margin: 0 auto; transform: none; }
+  .hero-floating-card { left: 1rem; bottom: 1rem; }
+  .hero-proof-divider { display: none; }
+}
+
+/* ============================================
+   INTENTS (Atalhos)
+   ============================================ */
+.intents { background: var(--white); padding-top: 5rem; padding-bottom: 5rem; }
+.intents-label { text-align: center; font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-500); margin-bottom: 2rem; }
+.intents-label-q { display: block; font-family: var(--font-display); font-size: clamp(1.25rem, 2vw, 1.5rem); font-weight: 700; letter-spacing: -0.015em; color: var(--accous-graphite); text-transform: none; margin-top: 0.625rem; }
+
+.intents-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+.intent { padding: 1.75rem 1.5rem; background: var(--cream-50); border: 1px solid rgba(0,0,0, 0.05); border-radius: var(--r-lg); transition: all 0.4s var(--ease-smooth); display: flex; flex-direction: column; min-height: 200px; position: relative; overflow: hidden; }
+.intent::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--accous-gradient); transform: scaleX(0); transform-origin: left; transition: transform 0.4s var(--ease-smooth); }
+.intent:hover { background: var(--white); transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: rgba(255, 65, 65, 0.15); }
+.intent:hover::before { transform: scaleX(1); }
+
+.intent-icon { width: 42px; height: 42px; border-radius: var(--r-sm); background: var(--white); border: 1px solid rgba(0,0,0, 0.08); display: flex; align-items: center; justify-content: center; color: var(--accous-red); margin-bottom: 1.25rem; transition: all 0.3s ease; }
+.intent:hover .intent-icon { background: var(--accous-gradient); color: var(--white); border-color: transparent; }
+.intent-title { font-family: var(--font-display); font-size: 1rem; font-weight: 800; line-height: 1.3; color: var(--accous-graphite); margin-bottom: 0.5rem; }
+.intent-text { font-size: 0.8125rem; color: var(--gray-500); line-height: 1.5; margin-bottom: auto; }
+.intent-arrow { margin-top: 1.25rem; display: inline-flex; align-items: center; gap: 0.375rem; font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; color: var(--accous-red); transition: gap 0.3s ease; }
+.intent:hover .intent-arrow { gap: 0.625rem; }
+
+.intent.intent-featured { background: linear-gradient(135deg, rgba(255, 170, 86, 0.05) 0%, rgba(255, 65, 65, 0.05) 100%); border-color: rgba(255, 65, 65, 0.2); }
+.intent.intent-featured .intent-icon { background: var(--accous-gradient); color: var(--white); border-color: transparent; }
+.intent-badge-small { position: absolute; top: 12px; right: 12px; padding: 0.2rem 0.6rem; background: var(--accous-graphite); color: var(--accous-orange); border-radius: var(--r-pill); font-family: var(--font-display); font-size: 0.625rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* ============================================
+   SECTORS MARQUEE
+   ============================================ */
+.sectors { padding: 3rem 0; background: var(--white); border-top: 1px solid rgba(0,0,0, 0.05); border-bottom: 1px solid rgba(0,0,0, 0.05); }
+.sectors-label { text-align: center; font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-500); margin-bottom: 1.5rem; }
+.sectors-list { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 2rem; font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--accous-graphite); }
+.sectors-list > span { display: inline-flex; align-items: center; gap: 2rem; }
+.sectors-list > span:not(:last-child)::after { content: "•"; color: var(--accous-red); }
+
+/* ============================================
+   PROBLEM SECTION (3 verdades)
+   ============================================ */
+.problem { background: var(--accous-graphite); color: var(--white); position: relative; overflow: hidden; }
+.problem::before { content: ""; position: absolute; top: -30%; left: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255, 65, 65, 0.15) 0%, transparent 70%); pointer-events: none; }
+.problem .eyebrow { color: var(--accous-orange); }
+.problem .eyebrow::before { background: var(--accous-orange); }
+
+.problem-header { max-width: 780px; margin-bottom: 4rem; position: relative; z-index: 1; }
+.problem-header .display-2 { margin-top: 1rem; color: var(--white); }
+
+.problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; position: relative; z-index: 1; }
+.problem-card { padding: 2.25rem; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--r-lg); transition: all 0.4s var(--ease-smooth); position: relative; overflow: hidden; }
+.problem-card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: var(--accous-gradient); transform: scaleX(0); transform-origin: left; transition: transform 0.5s ease; }
+.problem-card:hover { background: rgba(255, 255, 255, 0.07); transform: translateY(-5px); }
+.problem-card:hover::before { transform: scaleX(1); }
+
+.problem-card-icon { width: 48px; height: 48px; border-radius: var(--r-sm); background: var(--accous-gradient); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; }
+.problem-card-title { font-family: var(--font-display); font-size: 1.375rem; font-weight: 800; line-height: 1.25; margin-bottom: 0.875rem; color: var(--white); }
+.problem-card-text { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; line-height: 1.6; }
+
+/* ============================================
+   TURNING POINT (A virada)
+   ============================================ */
+.turning { background: var(--cream-50); }
+.turning-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.turning-content .display-2 { margin-top: 1rem; margin-bottom: 1.5rem; }
+
+.pillars { display: grid; gap: 1rem; }
+.pillar { padding: 1.75rem; background: var(--white); border: 1px solid rgba(0,0,0, 0.05); border-radius: var(--r-md); transition: all 0.3s var(--ease-smooth); }
+.pillar:hover { transform: translateX(8px); border-color: rgba(255, 65, 65, 0.25); box-shadow: var(--shadow-md); }
+.pillar-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; }
+.pillar-icon { width: 44px; height: 44px; border-radius: var(--r-sm); background: var(--accous-gradient-soft); display: flex; align-items: center; justify-content: center; color: var(--accous-red); flex-shrink: 0; }
+.pillar-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; color: var(--accous-graphite); }
+.pillar-text { font-size: 0.95rem; color: var(--gray-700); line-height: 1.6; margin-left: calc(44px + 1rem); }
+
+@media (max-width: 992px) { .turning-grid { grid-template-columns: 1fr; gap: 3rem; } .pillar-text { margin-left: 0; margin-top: 0.5rem; } .pillar:hover { transform: translateY(-5px); } }
+
+/* ============================================
+   DIGITAL vs ONLINE (Tabela)
+   ============================================ */
+.vs { background: var(--white); border-top: 1px solid rgba(0,0,0, 0.05); }
+.vs-inner { max-width: 980px; margin: 0 auto; text-align: center; }
+.vs-header { margin-bottom: 3rem; }
+.vs-header .eyebrow { justify-content: center; }
+.vs-header .display-2 { margin-top: 1rem; }
+.vs-header .display-2 em { font-style: normal; background: var(--accous-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.vs-paragraph { max-width: 720px; margin: 1.5rem auto 3rem; font-size: 1.1rem; line-height: 1.6; color: var(--gray-700); }
+.vs-paragraph strong { color: var(--accous-graphite); font-weight: 700; }
+
+.vs-table { display: grid; grid-template-columns: 1.4fr 1fr 1fr; background: var(--cream-50); border-radius: var(--r-lg); border: 1px solid rgba(0,0,0, 0.06); text-align: left; overflow: hidden; }
+.vs-table > div { padding: 1.25rem 1.5rem; border-bottom: 1px solid rgba(0,0,0, 0.05); font-family: var(--font-display); font-size: 0.95rem; display: flex; align-items: center; }
+.vs-table > div:nth-last-child(-n+3) { border-bottom: none; }
+.vs-th { font-weight: 800; color: var(--accous-graphite); background: var(--white); font-size: 0.85rem !important; text-transform: uppercase; letter-spacing: 0.1em; }
+.vs-th.vs-th-accous { color: var(--accous-red); position: relative; }
+.vs-th.vs-th-accous::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--accous-gradient); }
+.vs-label { color: var(--gray-700); font-weight: 700; background: var(--white); }
+.vs-cell { color: var(--gray-500); }
+.vs-cell.vs-cell-accous { color: var(--accous-graphite); font-weight: 700; background: rgba(255, 170, 86, 0.08); }
+
+@media (max-width: 768px) {
+  .vs-table { grid-template-columns: 1fr; }
+  .vs-table > div { padding: 1rem 1.25rem; }
+  .vs-th:first-of-type { display: none; }
+  .vs-label { background: var(--accous-graphite); color: var(--white); font-size: 0.8rem !important; text-transform: uppercase; letter-spacing: 0.1em; justify-content: center; }
+  .vs-cell, .vs-cell-accous { justify-content: center; text-align: center; }
+}
+
+/* ============================================
+   SERVICES
+   ============================================ */
+.services-header { max-width: 780px; margin-bottom: 4rem; text-align: center; margin-inline: auto;}
+.services-header .eyebrow { justify-content: center; }
+.services-header .display-2 { margin-top: 1rem; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+
+.service-card { padding: 2.25rem; background: var(--cream-50); border-radius: var(--r-lg); border: 1px solid transparent; transition: all 0.4s var(--ease-smooth); position: relative; overflow: hidden; }
+.service-card:hover { transform: translateY(-6px); background: var(--white); border-color: rgba(0,0,0, 0.08); box-shadow: var(--shadow-lg); }
+.service-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.75rem; }
+.service-card-icon { width: 52px; height: 52px; border-radius: var(--r-md); background: var(--white); border: 1px solid rgba(0,0,0, 0.08); display: flex; align-items: center; justify-content: center; color: var(--accous-red); box-shadow: var(--shadow-sm); }
+.service-card-arrow { width: 32px; height: 32px; border-radius: 50%; background: rgba(0,0,0, 0.04); display: flex; align-items: center; justify-content: center; color: var(--accous-graphite); transition: all 0.3s ease; }
+.service-card:hover .service-card-arrow { transform: translate(4px, -4px); color: var(--accous-red); background: rgba(255,65,65, 0.1); }
+.service-card-title { font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; line-height: 1.3; margin-bottom: 0.875rem; }
+.service-card-text { font-size: 0.95rem; color: var(--gray-700); line-height: 1.6; }
+
+/* ============================================
+   BENEFITS
+   ============================================ */
+.benefits { background: var(--cream-50); }
+.benefits-header { text-align: center; max-width: 720px; margin: 0 auto 4rem; }
+.benefits-header .eyebrow { justify-content: center; }
+.benefits-header .display-2 { margin-top: 1rem; }
+.benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+
+.benefit { padding: 2.5rem 2rem; background: var(--white); border-radius: var(--r-lg); border: 1px solid rgba(0,0,0, 0.05); position: relative; transition: all 0.4s var(--ease-smooth); overflow: hidden; }
+.benefit::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--accous-gradient); transform: scaleX(0); transform-origin: left; transition: transform 0.5s ease; }
+.benefit:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: rgba(255, 65, 65, 0.2); }
+.benefit:hover::before { transform: scaleX(1); }
+.benefit-badge { display: inline-block; padding: 0.3rem 0.8rem; background: var(--accous-gradient); color: var(--white); border-radius: var(--r-pill); font-family: var(--font-display); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.5rem; }
+.benefit-highlight { font-family: var(--font-display); font-size: 2.75rem; font-weight: 800; line-height: 1; background: var(--accous-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem; }
+.benefit-title { font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; color: var(--accous-graphite); margin-bottom: 0.75rem; }
+.benefit-text { font-size: 0.95rem; color: var(--gray-700); }
+
+/* ============================================
+   SEGMENTS
+   ============================================ */
+.segments { background: var(--accous-graphite); color: var(--white); position: relative; overflow: hidden; }
+.segments::before { content: ""; position: absolute; bottom: -40%; right: -10%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(255, 170, 86, 0.12) 0%, transparent 70%); pointer-events: none; }
+.segments-header { max-width: 780px; margin-bottom: 4rem; position: relative; z-index: 1; }
+.segments-header .display-2 { margin-top: 1rem; color: var(--white); }
+.segments-header .eyebrow { color: var(--accous-orange); }
+.segments-header .eyebrow::before { background: var(--accous-orange); }
+
+.segments-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; position: relative; z-index: 1; }
+.segment { padding: 2.25rem; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--r-lg); transition: all 0.4s ease; }
+.segment:hover { background: rgba(255, 255, 255, 0.07); border-color: rgba(255, 170, 86, 0.3); transform: translateY(-5px); }
+
+.segment-image { aspect-ratio: 16/9; border-radius: var(--r-md); margin-bottom: 1.75rem; background: linear-gradient(135deg, #3A3636 0%, #2B2929 100%); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.segment-image::before { content: ""; position: absolute; inset: 0; background: var(--accous-gradient); opacity: 0.25; mix-blend-mode: overlay; }
+.segment-image-icon { position: relative; z-index: 1; width: 64px; height: 64px; color: rgba(255, 255, 255, 0.9); }
+.segment-image-label { position: absolute; top: 12px; left: 12px; padding: 0.3rem 0.6rem; background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(8px); border-radius: 4px; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255, 255, 255, 0.8); z-index: 2; }
+
+.segment-title { font-family: var(--font-display); font-size: 1.375rem; font-weight: 800; margin-bottom: 0.75rem; color: var(--white); }
+.segment-text { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; }
+.segment-tag { display: inline-flex; align-items: center; gap: 0.375rem; padding: 0.3rem 0.75rem; background: rgba(255, 170, 86, 0.15); color: var(--accous-orange); border-radius: var(--r-pill); font-family: var(--font-display); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+
+/* ============================================
+   METHOD
+   ============================================ */
+.method { background: var(--white); }
+.method-header { max-width: 780px; margin-bottom: 5rem; }
+.method-header .display-2 { margin-top: 1rem; }
+
+.method-timeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; position: relative; }
+@media (min-width: 768px) {
+  .method-timeline::before { content: ""; position: absolute; top: 24px; left: 24px; right: 24px; height: 2px; background: linear-gradient(to right, var(--accous-orange), var(--accous-red)); opacity: 0.3; z-index: 0; }
+}
+.method-step { position: relative; z-index: 1; }
+.method-step-number { width: 48px; height: 48px; border-radius: 50%; background: var(--accous-gradient); color: var(--white); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 800; font-size: 1rem; margin-bottom: 1.5rem; box-shadow: 0 8px 20px rgba(255, 65, 65, 0.25); }
+.method-step-title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; margin-bottom: 0.625rem; color: var(--accous-graphite); }
+.method-step-text { font-size: 0.95rem; color: var(--gray-700); }
+
+@media (max-width: 767px) {
+  .method-step { padding-left: 4rem; }
+  .method-step-number { position: absolute; left: 0; top: 0; margin-bottom: 0; }
+}
+
+/* ============================================
+   CREDENTIALS
+   ============================================ */
+.credentials { background: var(--cream-50); }
+.credentials-header { text-align: center; max-width: 900px; margin: 0 auto 4rem; }
+.credentials-header .eyebrow { justify-content: center; }
+.credentials-header .display-2 { margin-top: 1rem; }
+
+.credentials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+.credential { padding: 2rem 1.5rem; background: var(--white); border-radius: var(--r-md); border: 1px solid rgba(0,0,0, 0.05); text-align: center; transition: all 0.3s ease; }
+.credential:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(255, 65, 65, 0.2); }
+.credential-number { font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; line-height: 1; margin-bottom: 0.5rem; background: var(--accous-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.credential-label { font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; color: var(--gray-700); }
+
+.credentials-extra { margin-top: 2.5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+.credential-chip { padding: 0.6rem 1.25rem; background: var(--white); border: 1px solid rgba(0,0,0, 0.06); border-radius: var(--r-pill); font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: var(--accous-graphite); display: inline-flex; align-items: center; gap: 0.5rem; }
+.credential-chip::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accous-red); }
+
+/* ============================================
+   FAQ
+   ============================================ */
+.faq { background: var(--white); }
+.faq-inner { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start; }
+.faq-sidebar { position: sticky; top: 100px; }
+.faq-sidebar .display-2 { margin-top: 1rem; margin-bottom: 1.5rem; }
+
+.faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
+.faq-item { background: var(--cream-50); border-radius: var(--r-md); border: 1px solid transparent; transition: all 0.3s ease; overflow: hidden; }
+.faq-item.active { background: var(--white); border-color: rgba(0,0,0, 0.08); box-shadow: var(--shadow-sm); }
+.faq-question { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.5rem 1.75rem; text-align: left; font-family: var(--font-display); font-size: 1.0625rem; font-weight: 800; color: var(--accous-graphite); transition: color 0.2s ease; }
+.faq-item.active .faq-question { color: var(--accous-red); }
+.faq-toggle { width: 28px; height: 28px; border-radius: 50%; background: rgba(0,0,0, 0.06); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; flex-shrink: 0; }
+.faq-item.active .faq-toggle { background: var(--accous-gradient); color: white; transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s var(--ease-smooth); }
+.faq-item.active .faq-answer { max-height: 400px; }
+.faq-answer-inner { padding: 0 1.75rem 1.5rem; color: var(--gray-700); font-size: 0.95rem; line-height: 1.6; }
+
+@media (max-width: 992px) { .faq-inner { grid-template-columns: 1fr; } .faq-sidebar { position: static; } }
+
+/* ============================================
+   FINAL CTA + CONTACT
+   ============================================ */
+.final-cta { background: var(--accous-graphite); color: var(--white); position: relative; overflow: hidden; }
+.final-cta::before { content: ""; position: absolute; top: -30%; right: -20%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(255, 65, 65, 0.18) 0%, transparent 65%); pointer-events: none; }
+.final-cta::after { content: ""; position: absolute; bottom: -40%; left: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255, 170, 86, 0.12) 0%, transparent 65%); pointer-events: none; }
+.final-cta .eyebrow { color: var(--accous-orange); }
+.final-cta .eyebrow::before { background: var(--accous-orange); }
+
+.final-cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; position: relative; z-index: 1; }
+.final-cta-content .display-2 { margin-top: 1rem; color: var(--white); }
+.final-cta-content .lead { margin-top: 1.25rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 2.5rem; }
+
+.contact-channels { display: flex; flex-direction: column; gap: 1rem; }
+.contact-channel { display: flex; align-items: center; gap: 1rem; padding: 1.25rem; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--r-md); transition: all 0.3s ease; }
+.contact-channel:hover { background: rgba(255, 255, 255, 0.07); border-color: rgba(255, 170, 86, 0.3); transform: translateX(5px); }
+.contact-channel-icon { width: 44px; height: 44px; border-radius: var(--r-sm); background: var(--accous-gradient); display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; }
+.contact-channel-label { font-family: var(--font-display); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accous-orange); margin-bottom: 0.25rem; }
+.contact-channel-value { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--white); }
+.contact-channel-arrow { margin-left: auto; color: rgba(255, 255, 255, 0.4); transition: all 0.3s ease; }
+.contact-channel:hover .contact-channel-arrow { color: var(--accous-orange); transform: translateX(3px); }
+
+/* Form */
+.contact-form { padding: 2.5rem; background: var(--white); color: var(--accous-graphite); border-radius: var(--r-lg); box-shadow: var(--shadow-lg); }
+.form-title { font-family: var(--font-display); font-size: 1.375rem; font-weight: 800; margin-bottom: 0.5rem; }
+.form-subtitle { font-size: 0.9rem; color: var(--gray-500); margin-bottom: 2rem; }
+.form-group { margin-bottom: 1.25rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-label { display: block; font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: var(--gray-700); margin-bottom: 0.5rem; }
+.form-input, .form-textarea, .form-select { width: 100%; padding: 0.875rem 1rem; background: var(--cream-50); border: 2px solid transparent; border-radius: var(--r-sm); font-size: 0.95rem; color: var(--accous-graphite); transition: all 0.3s ease; }
+.form-input:focus, .form-textarea:focus, .form-select:focus { outline: none; background: var(--white); border-color: var(--accous-red); box-shadow: 0 0 0 4px rgba(255, 65, 65, 0.1); }
+.form-textarea { resize: vertical; min-height: 100px; }
+.form-select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%232B2929' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; cursor: pointer; }
+.form-check { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.85rem; color: var(--gray-700); margin-bottom: 1.5rem; cursor: pointer; }
+.form-check input { margin-top: 4px; accent-color: var(--accous-red); }
+.form-check a { color: var(--accous-red); font-weight: 600; text-decoration: underline; }
+.form-submit { width: 100%; padding: 1rem; background: var(--accous-graphite); color: var(--white); font-family: var(--font-display); font-size: 1rem; font-weight: 700; border-radius: var(--r-pill); transition: all 0.4s var(--ease-smooth); display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; position: relative; overflow: hidden; }
+.form-submit::before { content: ""; position: absolute; inset: 0; background: var(--accous-gradient); opacity: 0; transition: opacity 0.4s ease; z-index: 0; }
+.form-submit > * { position: relative; z-index: 1; }
+.form-submit:hover::before { opacity: 1; }
+.form-submit:hover { transform: translateY(-2px); box-shadow: var(--shadow-glow); }
+
+@media (max-width: 992px) { .final-cta-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } .contact-form { padding: 2rem 1.5rem; } }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer { background: #1F1E1E; color: rgba(255, 255, 255, 0.6); padding: 5rem 0 2rem; position: relative; }
+.footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255, 170, 86, 0.3), transparent); }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 3rem; margin-bottom: 4rem; }
+.footer-logo { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
+.footer-brand-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--white); }
+.footer-brand-tag { font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accous-orange); }
+.footer-description { font-size: 0.95rem; color: rgba(255, 255, 255, 0.5); }
+.footer-col-title { font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255, 255, 255, 0.9); margin-bottom: 1.5rem; }
+.footer-links { display: flex; flex-direction: column; gap: 0.75rem; }
+.footer-links a { font-size: 0.95rem; color: rgba(255, 255, 255, 0.55); transition: color 0.2s ease; }
+.footer-links a:hover { color: var(--accous-orange); }
+.footer-contact-item { font-size: 0.95rem; color: rgba(255, 255, 255, 0.55); margin-bottom: 0.75rem; }
+.footer-social { display: flex; gap: 0.75rem; margin-top: 1.5rem; }
+.footer-social a { width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.06); display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.7); transition: all 0.3s ease; }
+.footer-social a:hover { background: var(--accous-gradient); color: var(--white); transform: translateY(-3px); }
+
+.footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.4); }
+.footer-bottom-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.footer-bottom a:hover { color: var(--accous-orange); }
+
+@media (max-width: 992px) { .footer-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); } .footer-grid > div:first-child { grid-column: 1 / -1; } }
+
+/* ============================================
+   WHATSAPP FLOAT
+   ============================================ */
+.whatsapp-float { position: fixed; bottom: 24px; right: 24px; z-index: 99; width: 60px; height: 60px; border-radius: 50%; background: var(--accous-gradient); display: flex; align-items: center; justify-content: center; color: white; box-shadow: var(--shadow-glow); transition: all 0.4s var(--ease-smooth); animation: pulse-glow 2.5s ease-in-out infinite; }
+.whatsapp-float:hover { transform: scale(1.1) rotate(5deg); box-shadow: 0 15px 40px rgba(255, 65, 65, 0.4); }
+.whatsapp-tooltip { position: absolute; right: calc(100% + 12px); top: 50%; transform: translateY(-50%) translateX(10px); background: var(--accous-graphite); color: var(--white); padding: 0.6rem 1rem; border-radius: var(--r-sm); font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; white-space: nowrap; opacity: 0; pointer-events: none; transition: all 0.3s ease; box-shadow: var(--shadow-md); }
+.whatsapp-tooltip::after { content: ""; position: absolute; left: 100%; top: 50%; transform: translateY(-50%); border: 6px solid transparent; border-left-color: var(--accous-graphite); }
+.whatsapp-float:hover .whatsapp-tooltip, .whatsapp-float.tooltip-visible .whatsapp-tooltip { opacity: 1; transform: translateY(-50%) translateX(0); }
+
+/* Utilitários Visuais Compartilhados */
+.icon-svg { width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+
+<!-- SVG Definitions -->
+<svg style="display:none;" aria-hidden="true">
+  <defs>
+    <!-- Accous Icon Gradient -->
+    <linearGradient id="accous-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFAA56"/>
+      <stop offset="100%" stop-color="#FF4141"/>
+    </linearGradient>
+
+    <!-- Logo / Brand Icon -->
+    <symbol id="accous-icon" viewBox="0 0 100 100">
+      <path d="M 22 68 L 50 16 L 78 68" stroke="url(#accous-grad)" stroke-width="11" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 70 58 A 18 18 0 1 0 70 94" stroke="url(#accous-grad)" stroke-width="11" fill="none" stroke-linecap="round"/>
+      <circle cx="16" cy="80" r="7" fill="#FFAA56"/>
+    </symbol>
+
+    <!-- Funcionais (Lucide-style) -->
+    <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+    <symbol id="i-file-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></symbol>
+    <symbol id="i-badge-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-puzzle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.39 4.39a2.5 2.5 0 0 0 4.22 2.22c.2-.24.63-.18.65.14a8 8 0 1 1-8.02-8.02c.32.02.37.45.13.65a2.5 2.5 0 0 0 3.02 5.01"/></symbol>
+    <symbol id="i-calculator" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></symbol>
+    <symbol id="i-trending" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+    <symbol id="i-radar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.07 4.93A10 10 0 0 0 6.99 3.34"/><path d="M4 6h.01"/><path d="M2.29 9.62A10 10 0 1 0 21.31 8.35"/><path d="M16.24 7.76A6 6 0 1 0 8.23 16.67"/><path d="M12 18h.01"/><path d="M17.99 11.66A6 6 0 0 1 15.77 16.67"/><circle cx="12" cy="12" r="2"/><path d="m13.41 10.59 5.66-5.66"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></symbol>
+    <symbol id="i-chef" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></symbol>
+    <symbol id="i-shopping-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="i-spade" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9c-1.5 1.5-3 3.2-3 5.5A5.5 5.5 0 0 0 7.5 20c1.8 0 3-.5 4.5-2 1.5 1.5 2.7 2 4.5 2a5.5 5.5 0 0 0 5.5-5.5c0-2.3-1.5-4-3-5.5l-7-7-7 7Z"/><path d="M12 18v4"/></symbol>
+    <symbol id="i-laptop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="12" x="3" y="4" rx="2" ry="2"/><line x1="2" x2="22" y1="20" y2="20"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.465 3.488"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></symbol>
+    <symbol id="i-alert-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></symbol>
+  </defs>
+</svg>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner container">
+    <a href="#" class="nav-brand">
+      <svg class="nav-brand-icon" aria-hidden="true"><use href="#accous-icon"/></svg>
+      <div class="nav-brand-text">
+        <span class="nav-brand-name">Accous</span>
+        <span class="nav-brand-tag">be wise</span>
+      </div>
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="#a-accous" class="nav-link">A Accous</a></li>
+      <li><a href="#servicos" class="nav-link">Serviços</a></li>
+      <li><a href="#segmentos" class="nav-link">Para seu negócio</a></li>
+      <li><a href="#contato" class="nav-link">Contato</a></li>
+    </ul>
+
+    <a href="#contato" class="btn btn-primary nav-cta nav-cta-desktop">
+      <span>Fale com a Accous</span>
+      <svg class="btn-arrow" width="14" height="14" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+    </a>
+
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
+  <button class="mobile-menu-close" id="mobileClose" aria-label="Fechar menu">
+    <svg width="24" height="24" aria-hidden="true"><use href="#i-close"/></svg>
+  </button>
+  <ul>
+    <li><a href="#a-accous">A Accous</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#segmentos">Para seu negócio</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <a href="#contato" class="btn btn-primary mobile-menu-cta">
+    <span>Fale com a Accous</span>
+    <svg class="btn-arrow" width="14" height="14" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+  </a>
+</div>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-gradient-blob"></div>
+    <div class="hero-bg-pattern">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><use href="#accous-icon"/></svg>
+    </div>
+
+    <div class="hero-inner container">
+      <div class="hero-content">
+        <div class="eyebrow reveal">Contabilidade digital premium · Atendimento nacional</div>
+        <h1 class="display-1 hero-title reveal reveal-delay-1">
+          Contabilidade que <em>trabalha antes</em> de você precisar.
+        </h1>
+        <p class="lead reveal reveal-delay-2">
+          Soluções sob medida focadas no seu resultado. Colocamos o cliente no centro com uma estratégia desenhada exclusivamente para a sua empresa.
+        </p>
+        <div class="hero-ctas reveal reveal-delay-3">
+          <a href="#contato" class="btn btn-primary">
+            <span>Fale com a Accous</span>
+            <svg class="btn-arrow" width="16" height="16" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </a>
+          <a href="#a-accous" class="btn btn-secondary">Como a Accous funciona</a>
+        </div>
+
+        <div class="hero-proof reveal reveal-delay-4">
+          <div class="hero-proof-stat">
+            <span class="hero-proof-number">+10</span>
+            <span class="hero-proof-label">anos de experiência aplicada</span>
+          </div>
+          <div class="hero-proof-divider"></div>
+          <div class="hero-proof-stat">
+            <span class="hero-proof-number">100%</span>
+            <span class="hero-proof-label">digital, atendimento nacional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal reveal-delay-2">
+        <div class="hero-visual-placeholder">
+          <span class="hero-visual-tag">[Imagem · Retrato ambiental da CEO]</span>
+          <div class="hero-visual-desc">
+            <span class="hero-visual-desc-label">Espaço reservado</span>
+            Foto em contexto de trabalho, luz natural de janela, fundo desfocado de escritório moderno. Enquadramento 3/4, olhar direto para câmera.
+          </div>
+        </div>
+
+        <div class="hero-floating-card">
+          <div class="hero-floating-card-icon">
+            <svg width="18" height="18" aria-hidden="true"><use href="#i-radar"/></svg>
+          </div>
+          <div class="hero-floating-card-text">
+            <div class="hero-floating-card-title">Monitoramento ativo</div>
+            <div class="hero-floating-card-sub">Pendências detectadas em tempo real</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTENTS -->
+  <section class="intents">
+    <div class="container">
+      <p class="intents-label">
+        O que te trouxe até aqui?
+        <span class="intents-label-q">Escolha o caminho — cuidamos do resto.</span>
+      </p>
+
+      <div class="intents-grid">
+        <a href="#metodo" class="intent reveal">
+          <div class="intent-icon"><svg width="20" height="20" aria-hidden="true"><use href="#i-repeat"/></svg></div>
+          <h3 class="intent-title">Quero trocar de contabilidade</h3>
+          <p class="intent-text">Estou insatisfeito com o atendimento ou com o trabalho do meu contador atual.</p>
+          <span class="intent-arrow">Como migrar <svg width="12" height="12" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+        </a>
+
+        <a href="#servicos" class="intent reveal reveal-delay-1">
+          <div class="intent-icon"><svg width="20" height="20" aria-hidden="true"><use href="#i-sparkles"/></svg></div>
+          <h3 class="intent-title">Vou abrir empresa</h3>
+          <p class="intent-text">Quero começar com o pé direito: CNPJ certo, regime certo, estrutura certa.</p>
+          <span class="intent-arrow">Ver o processo <svg width="12" height="12" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+        </a>
+
+        <a href="https://wa.me/5531992280076?text=Ol%C3%A1%2C%20Accous.%20Tenho%20um%20problema%20urgente%20e%20preciso%20de%20ajuda." target="_blank" rel="noopener" class="intent reveal reveal-delay-2">
+          <div class="intent-icon"><svg width="20" height="20" aria-hidden="true"><use href="#i-alert-circle"/></svg></div>
+          <h3 class="intent-title">Tenho um problema urgente</h3>
+          <p class="intent-text">Notificação, multa, prazo apertado ou pendência que apareceu do nada.</p>
+          <span class="intent-arrow">Falar agora no WhatsApp <svg width="12" height="12" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+        </a>
+
+        <a href="#segmentos" class="intent reveal reveal-delay-3">
+          <div class="intent-icon"><svg width="20" height="20" aria-hidden="true"><use href="#i-target"/></svg></div>
+          <h3 class="intent-title">Meu setor é específico</h3>
+          <p class="intent-text">Entretenimento, poker, prestação de serviço ou profissionais liberais.</p>
+          <span class="intent-arrow">Ver especialização <svg width="12" height="12" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+        </a>
+
+        <a href="#beneficios" class="intent intent-featured reveal reveal-delay-4">
+          <span class="intent-badge-small">Indicação</span>
+          <div class="intent-icon"><svg width="20" height="20" aria-hidden="true"><use href="#i-handshake"/></svg></div>
+          <h3 class="intent-title">Vim por indicação</h3>
+          <p class="intent-text">Quero confirmar tudo que ouvi e entender os benefícios na prática.</p>
+          <span class="intent-arrow">Ver os diferenciais <svg width="12" height="12" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTORS MARQUEE -->
+  <section class="sectors">
+    <div class="container">
+      <p class="sectors-label">Atendemos empresas em diversos segmentos</p>
+      <div class="sectors-list">
+        <span>Entretenimento</span>
+        <span>Prestadores de serviço</span>
+        <span>Profissionais Liberais</span>
+        <span>Indústrias e comércio</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="section problem">
+    <div class="container">
+      <div class="problem-header reveal">
+        <span class="eyebrow">O que o mercado contábil deixa passar</span>
+        <h2 class="display-2">Três verdades sobre sua contabilidade atual.</h2>
+      </div>
+
+      <div class="problem-grid">
+        <div class="problem-card reveal">
+          <div class="problem-card-icon"><svg width="22" height="22" aria-hidden="true"><use href="#i-alert"/></svg></div>
+          <h3 class="problem-card-title">Você descobre tarde.</h3>
+          <p class="problem-card-text">Notificação da Receita chega sem aviso. Quando você fica sabendo, a conta já cresceu.</p>
+        </div>
+
+        <div class="problem-card reveal reveal-delay-1">
+          <div class="problem-card-icon"><svg width="22" height="22" aria-hidden="true"><use href="#i-file-text"/></svg></div>
+          <h3 class="problem-card-title">Relatório, não inteligência.</h3>
+          <p class="problem-card-text">DARF, DCTF, DAS — tudo pontual. Mas a decisão que importa fica sem resposta.</p>
+        </div>
+
+        <div class="problem-card reveal reveal-delay-2">
+          <div class="problem-card-icon"><svg width="22" height="22" aria-hidden="true"><use href="#i-users"/></svg></div>
+          <h3 class="problem-card-title">Atendente, não contador.</h3>
+          <p class="problem-card-text">Sua dúvida passa por três pessoas antes de chegar em quem entende. E aí a urgência já passou.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TURNING POINT -->
+  <section class="section turning" id="a-accous">
+    <div class="container">
+      <div class="turning-grid">
+        <div class="turning-content reveal">
+          <span class="eyebrow">Por que a Accous é diferente</span>
+          <h2 class="display-2">Desenhada para antecipar, não só executar.</h2>
+          <p class="lead">
+            Contabilidade tradicional opera por entrega. A Accous opera por antecipação: monitoramento contínuo, tecnologia proprietária e atuação direta da CEO. Sem intermediários, sem roteiro.
+          </p>
+        </div>
+
+        <div class="pillars">
+          <div class="pillar reveal">
+            <div class="pillar-header">
+              <div class="pillar-icon"><svg width="20" height="20" aria-hidden="true"><use href="#i-users"/></svg></div>
+              <h3 class="pillar-title">Especialização por setor</h3>
+            </div>
+            <p class="pillar-text">Entretenimento, prestadores de serviço e profissionais liberais. Conhecimento profundo aplicado ao seu negócio.</p>
+          </div>
+
+          <div class="pillar reveal reveal-delay-1">
+            <div class="pillar-header">
+              <div class="pillar-icon"><svg width="20" height="20" aria-hidden="true"><use href="#i-cpu"/></svg></div>
+              <h3 class="pillar-title">ACCOUS Smart</h3>
+            </div>
+            <p class="pillar-text">Tecnologia proprietária que monitora pendências no e-CAC e cruza dados fiscais em tempo real.</p>
+          </div>
+
+          <div class="pillar reveal reveal-delay-2">
+            <div class="pillar-header">
+              <div class="pillar-icon"><svg width="20" height="20" aria-hidden="true"><use href="#i-badge-check"/></svg></div>
+              <h3 class="pillar-title">CEO no atendimento</h3>
+            </div>
+            <p class="pillar-text">Thalita Morais conversa diretamente com os empresários. Sem triagem, sem filtro.</p>
+          </div>
+
+          <div class="pillar reveal reveal-delay-3">
+            <div class="pillar-header">
+              <div class="pillar-icon"><svg width="20" height="20" aria-hidden="true"><use href="#i-puzzle"/></svg></div>
+              <h3 class="pillar-title">Entrega sob medida</h3>
+            </div>
+            <p class="pillar-text">Relatório, planilha, PDF assinado ou reunião. Você escolhe o formato.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIGITAL VS ONLINE -->
+  <section class="section vs">
+    <div class="container">
+      <div class="vs-inner">
+        <div class="vs-header reveal">
+          <span class="eyebrow">Para entender a Accous</span>
+          <h2 class="display-2">Contabilidade <em>digital premium</em>.<br>Não é contabilidade online.</h2>
+          <p class="vs-paragraph">
+            <strong>Contabilidade online</strong> vende plano padronizado: sistema, formulário, preço baixo, sem consultoria. Funciona para quem só quer a obrigação entregue. <strong>A Accous é contabilidade digital premium</strong>: operação 100% em tecnologia, sem papel, com atendimento humano, consultivo e direto. Serve para quem precisa decidir com base em número, não só pagar imposto em dia.
+          </p>
+        </div>
+
+        <div class="vs-table reveal">
+          <div class="vs-th">&nbsp;</div>
+          <div class="vs-th">Contabilidade online</div>
+          <div class="vs-th vs-th-accous">Accous</div>
+
+          <div class="vs-label">Atendimento</div>
+          <div class="vs-cell">Chat padronizado, roteiro</div>
+          <div class="vs-cell vs-cell-accous">Direto com a CEO</div>
+
+          <div class="vs-label">Consultoria</div>
+          <div class="vs-cell">Não inclui</div>
+          <div class="vs-cell vs-cell-accous">Inclui, consultiva</div>
+
+          <div class="vs-label">Tecnologia</div>
+          <div class="vs-cell">Plataforma genérica</div>
+          <div class="vs-cell vs-cell-accous">ACCOUS Smart + humano</div>
+
+          <div class="vs-label">Especialização</div>
+          <div class="vs-cell">Genérica</div>
+          <div class="vs-cell vs-cell-accous">Por setor</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services" id="servicos">
+    <div class="container">
+      <div class="services-header reveal">
+        <span class="eyebrow">O que a Accous entrega</span>
+        <h2 class="display-2">Execução interna.<br>Entrega sob medida.</h2>
+        <p class="lead">Supervisão direta da CEO. Padrão combinado, prazo combinado.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-card-top">
+            <div class="service-card-icon"><svg width="24" height="24" aria-hidden="true"><use href="#i-calculator"/></svg></div>
+            <div class="service-card-arrow"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></div>
+          </div>
+          <h3 class="service-card-title">Contabilidade Consultiva</h3>
+          <p class="service-card-text">Fechamento mensal, DRE gerencial e números com contexto para decisão.</p>
+        </article>
+
+        <article class="service-card reveal reveal-delay-1">
+          <div class="service-card-top">
+            <div class="service-card-icon"><svg width="24" height="24" aria-hidden="true"><use href="#i-users"/></svg></div>
+            <div class="service-card-arrow"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></div>
+          </div>
+          <h3 class="service-card-title">Folha, eSocial e Dept. Pessoal</h3>
+          <p class="service-card-text">Admissões, rescisões, eSocial, EFD-REINF e CCT aplicada.</p>
+        </article>
+
+        <article class="service-card reveal reveal-delay-2">
+          <div class="service-card-top">
+            <div class="service-card-icon"><svg width="24" height="24" aria-hidden="true"><use href="#i-trending"/></svg></div>
+            <div class="service-card-arrow"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></div>
+          </div>
+          <h3 class="service-card-title">Planejamento Tributário</h3>
+          <p class="service-card-text">Análise de regime, recuperação de créditos e adequação à Reforma Tributária (IBS, CBS, Imposto Seletivo).</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card-top">
+            <div class="service-card-icon"><svg width="24" height="24" aria-hidden="true"><use href="#i-radar"/></svg></div>
+            <div class="service-card-arrow"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></div>
+          </div>
+          <h3 class="service-card-title">Monitoramento Fiscal em Tempo Real</h3>
+          <p class="service-card-text">e-CAC, SEFAZ, INSS e Prefeitura sob vigilância contínua.</p>
+        </article>
+
+        <article class="service-card reveal reveal-delay-1">
+          <div class="service-card-top">
+            <div class="service-card-icon"><svg width="24" height="24" aria-hidden="true"><use href="#i-clipboard"/></svg></div>
+            <div class="service-card-arrow"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></div>
+          </div>
+          <h3 class="service-card-title">Obrigações Acessórias</h3>
+          <p class="service-card-text">SPED, EFD Contribuições, DCTFWeb, EFD-REINF, DEFIS, DIRF no prazo.</p>
+        </article>
+
+        <article class="service-card reveal reveal-delay-2">
+          <div class="service-card-top">
+            <div class="service-card-icon"><svg width="24" height="24" aria-hidden="true"><use href="#i-building"/></svg></div>
+            <div class="service-card-arrow"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></div>
+          </div>
+          <h3 class="service-card-title">Abertura, Alteração e Regularização</h3>
+          <p class="service-card-text">Constituição societária, alterações contratuais, regularização e baixa de CNPJ.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="section benefits" id="beneficios">
+    <div class="container">
+      <div class="benefits-header reveal">
+        <span class="eyebrow">Incluídos sem custo extra</span>
+        <h2 class="display-2">Benefícios que só cliente Accous tem.</h2>
+      </div>
+
+      <div class="benefits-grid">
+        <article class="benefit reveal">
+          <span class="benefit-badge">Economia real</span>
+          <div class="benefit-highlight">-60%</div>
+          <h3 class="benefit-title">Certificado digital mais barato</h3>
+          <p class="benefit-text">Preço negociado, emissão na hora por videochamada. Toda a burocracia fica com a Accous — você só aparece para a biometria.</p>
+        </article>
+
+        <article class="benefit reveal reveal-delay-1">
+          <span class="benefit-badge">Sem limite</span>
+          <div class="benefit-highlight">NF-e</div>
+          <h3 class="benefit-title">Emissão ilimitada e grátis</h3>
+          <p class="benefit-text">Cliente Accous não paga por nota fiscal. Quantas forem, sem limite, sem mensalidade extra, sem taxa por volume.</p>
+        </article>
+
+        <article class="benefit reveal reveal-delay-2">
+          <span class="benefit-badge">Acesso direto</span>
+          <div class="benefit-highlight">CEO</div>
+          <h3 class="benefit-title">Atendimento com a Thalita Morais</h3>
+          <p class="benefit-text">Você no centro da nossa operação. Soluções contábeis desenhadas exclusivamente para a sua realidade, com contato direto focado no seu resultado.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGMENTS -->
+  <section class="section segments" id="segmentos">
+    <div class="container">
+      <div class="segments-header reveal">
+        <span class="eyebrow">Especialização por setor</span>
+        <h2 class="display-2">Cada segmento tem sua lógica.</h2>
+      </div>
+
+      <div class="segments-grid">
+        <article class="segment reveal">
+          <div class="segment-image">
+            <span class="segment-image-label">[Foto · Mesa de poker, fichas]</span>
+            <svg class="segment-image-icon" aria-hidden="true"><use href="#i-spade"/></svg>
+          </div>
+          <h3 class="segment-title">Entretenimento, poker e eventos</h3>
+          <p class="segment-text">Setor sem regulamentação fiscal específica. A Accous atua sob a legislação vigente com estratégia desenhada para a realidade do poker.</p>
+          <span class="segment-tag">Nicho especializado</span>
+        </article>
+
+        <article class="segment reveal reveal-delay-1">
+          <div class="segment-image">
+            <span class="segment-image-label">[Foto · Consultório ou escritório]</span>
+            <svg class="segment-image-icon" aria-hidden="true"><use href="#i-users"/></svg>
+          </div>
+          <h3 class="segment-title">Profissionais Liberais</h3>
+          <p class="segment-text">Planejamento tributário inteligente para médicos, dentistas, advogados e arquitetos. Análise detalhada entre atuar na Pessoa Física ou Jurídica.</p>
+          <span class="segment-tag">Atendimento consultivo</span>
+        </article>
+
+        <article class="segment reveal reveal-delay-2">
+          <div class="segment-image">
+            <span class="segment-image-label">[Foto · Home office, laptop aberto]</span>
+            <svg class="segment-image-icon" aria-hidden="true"><use href="#i-laptop"/></svg>
+          </div>
+          <h3 class="segment-title">Prestadores de serviço</h3>
+          <p class="segment-text">ISS, pró-labore e distribuição de lucros otimizada. Regime tributário certo para garantir a melhor rentabilidade da sua empresa.</p>
+          <span class="segment-tag">Alto volume</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section class="section method" id="metodo">
+    <div class="container">
+      <div class="method-header reveal">
+        <span class="eyebrow">Como funciona na prática</span>
+        <h2 class="display-2">Da primeira conversa à operação contínua.</h2>
+      </div>
+
+      <div class="method-timeline">
+        <div class="method-step reveal">
+          <div class="method-step-number">01</div>
+          <h3 class="method-step-title">Diagnóstico inicial</h3>
+          <p class="method-step-text">Mapeamos sua situação contábil, fiscal e pessoal. Gratuito, sem compromisso.</p>
+        </div>
+
+        <div class="method-step reveal reveal-delay-1">
+          <div class="method-step-number">02</div>
+          <h3 class="method-step-title">Plano de transição</h3>
+          <p class="method-step-text">Cuidamos da burocracia de saída. O tempo depende do contrato vigente, conduzido para ser o mais ágil possível.</p>
+        </div>
+
+        <div class="method-step reveal reveal-delay-2">
+          <div class="method-step-number">03</div>
+          <h3 class="method-step-title">Operação contínua</h3>
+          <p class="method-step-text">Execução mensal com monitoramento ativo e reuniões na frequência que você preferir.</p>
+        </div>
+
+        <div class="method-step reveal reveal-delay-3">
+          <div class="method-step-number">04</div>
+          <h3 class="method-step-title">Crescimento estratégico</h3>
+          <p class="method-step-text">Quando sua empresa cresce, muda ou se reestrutura, a Accous está ao lado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="section credentials">
+    <div class="container">
+      <div class="credentials-header reveal">
+        <span class="eyebrow">Quem confia na Accous</span>
+        <h2 class="display-2" style="text-wrap: balance;">Empresários que elevaram o padrão<br>da sua contabilidade.</h2>
+      </div>
+
+      <div class="credentials-grid">
+        <div class="credential reveal">
+          <div class="credential-number">+10</div>
+          <div class="credential-label">Anos de experiência aplicada em Contábil, Fiscal e Pessoal</div>
+        </div>
+        <div class="credential reveal reveal-delay-1">
+          <div class="credential-number">100%</div>
+          <div class="credential-label">Digital, com atendimento em todo o Brasil</div>
+        </div>
+        <div class="credential reveal reveal-delay-2">
+          <div class="credential-number">4</div>
+          <div class="credential-label">Setores com especialização direta</div>
+        </div>
+        <div class="credential reveal reveal-delay-3">
+          <div class="credential-number">24h</div>
+          <div class="credential-label">Prazo médio de resposta para demandas estratégicas</div>
+        </div>
+      </div>
+
+      <div class="credentials-extra reveal">
+        <span class="credential-chip">Parceria Domínio Thomson Reuters</span>
+        <span class="credential-chip">Certificado digital com desconto</span>
+        <span class="credential-chip">NF-e ilimitada grátis</span>
+        <span class="credential-chip">ACCOUS Smart — tecnologia proprietária</span>
+        <span class="credential-chip">Fundada em 2023</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq">
+    <div class="container">
+      <div class="faq-inner">
+        <div class="faq-sidebar reveal">
+          <span class="eyebrow">Perguntas frequentes</span>
+          <h2 class="display-2">Respostas diretas.</h2>
+          <p class="lead">Ainda com dúvida? Fale com a Accous pelo WhatsApp.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item active reveal">
+            <button class="faq-question">
+              <span>Em quanto tempo consigo migrar para a Accous?</span>
+              <span class="faq-toggle"><svg width="14" height="14"><use href="#i-plus"/></svg></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Depende do contrato com sua contabilidade atual — prazo de rescisão, multas contratuais e obrigações pendentes. Resolvida essa etapa, a burocracia de migração é toda conduzida pela Accous. Cada caso é tratado individualmente para ser o mais ágil possível, sem impactos nas suas entregas correntes.</div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question">
+              <span>A Accous atende empresas fora de Belo Horizonte?</span>
+              <span class="faq-toggle"><svg width="14" height="14"><use href="#i-plus"/></svg></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Sim. A Accous é contabilidade digital: operação 100% em tecnologia, atendimento em todo o Brasil por videoconferência, WhatsApp e canais seguros. A sede operacional em BH é apenas endereço administrativo.</div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question">
+              <span>Minha empresa é pequena. A Accous me atende?</span>
+              <span class="faq-toggle"><svg width="14" height="14"><use href="#i-plus"/></svg></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Atendemos do MEI ao Lucro Real. O que define se a parceria faz sentido é o perfil da sua operação — se você precisa de contabilidade consultiva, monitoramento ativo e atendimento direto com quem decide, a Accous é para você.</div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question">
+              <span>Como funciona a comunicação no dia a dia?</span>
+              <span class="faq-toggle"><svg width="14" height="14"><use href="#i-plus"/></svg></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">WhatsApp, e-mail ou videochamada — você escolhe. A Thalita atende diretamente os empresários, sem intermediário.</div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question">
+              <span>Como a Accous lida com a Reforma Tributária?</span>
+              <span class="faq-toggle"><svg width="14" height="14"><use href="#i-plus"/></svg></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Acompanhamos de perto a transição para IBS, CBS e Imposto Seletivo (LC 214/2025). Clientes recebem análise individual de impacto no seu CNPJ antes de cada fase.</div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question">
+              <span>Qual é o investimento?</span>
+              <span class="faq-toggle"><svg width="14" height="14"><use href="#i-plus"/></svg></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Definido após o diagnóstico gratuito, conforme porte, regime tributário e serviços. Proposta personalizada.</div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question">
+              <span>Vocês atendem meu setor?</span>
+              <span class="faq-toggle"><svg width="14" height="14"><use href="#i-plus"/></svg></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Especialização direta em entretenimento (incluindo poker), prestadores de serviço e profissionais liberais. Outros setores: validamos no primeiro contato.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA & CONTACT -->
+  <section class="section final-cta" id="contato">
+    <div class="container">
+      <div class="final-cta-grid">
+        <div class="final-cta-content reveal">
+          <span class="eyebrow">Vamos conversar</span>
+          <h2 class="display-2">Converse com a Accous.</h2>
+          <p class="lead">Diagnóstico inicial gratuito. Resposta em até 1 dia útil.</p>
+
+          <div class="contact-channels">
+            <a href="https://wa.me/5531992280076" target="_blank" rel="noopener" class="contact-channel">
+              <div class="contact-channel-icon"><svg width="20" height="20" aria-hidden="true"><use href="#i-whatsapp"/></svg></div>
+              <div class="contact-channel-info">
+                <div class="contact-channel-label">WhatsApp</div>
+                <div class="contact-channel-value">(31) 9 9228-0076</div>
+              </div>
+              <svg class="contact-channel-arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </a>
+
+            <a href="mailto:contato@accous.com.br" class="contact-channel">
+              <div class="contact-channel-icon"><svg width="20" height="20" aria-hidden="true"><use href="#i-mail"/></svg></div>
+              <div class="contact-channel-info">
+                <div class="contact-channel-label">E-mail</div>
+                <div class="contact-channel-value">contato@accous.com.br</div>
+              </div>
+              <svg class="contact-channel-arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </a>
+
+            <a href="#" class="contact-channel">
+              <div class="contact-channel-icon"><svg width="20" height="20" aria-hidden="true"><use href="#i-map-pin"/></svg></div>
+              <div class="contact-channel-info">
+                <div class="contact-channel-label">Sede operacional</div>
+                <div class="contact-channel-value">Rua Fausto Alvim, 371 · Sala 4403 · BH</div>
+              </div>
+              <svg class="contact-channel-arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </a>
+
+            <a href="https://instagram.com/accous.oficial" target="_blank" rel="noopener" class="contact-channel">
+              <div class="contact-channel-icon"><svg width="20" height="20" aria-hidden="true"><use href="#i-instagram"/></svg></div>
+              <div class="contact-channel-info">
+                <div class="contact-channel-label">Instagram</div>
+                <div class="contact-channel-value">@accous.oficial</div>
+              </div>
+              <svg class="contact-channel-arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form reveal reveal-delay-1">
+          <h3 class="form-title">Fale com a Accous</h3>
+          <p class="form-subtitle">Resposta direta da Thalita em até 1 dia útil.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Nome *</label>
+              <input type="text" class="form-input" placeholder="Seu nome completo">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Empresa *</label>
+              <input type="text" class="form-input" placeholder="Razão social ou fantasia">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">E-mail *</label>
+              <input type="email" class="form-input" placeholder="seu@email.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">WhatsApp *</label>
+              <input type="tel" class="form-input" placeholder="(00) 00000-0000">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Segmento</label>
+            <select class="form-select">
+              <option>Selecione seu segmento</option>
+              <option>Entretenimento e poker</option>
+              <option>Prestadores de serviço</option>
+              <option>Profissionais Liberais</option>
+              <option>Indústria e comércio</option>
+              <option>Outro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Mensagem *</label>
+            <textarea class="form-textarea" placeholder="Conte brevemente o contexto da sua empresa e o que você busca."></textarea>
+          </div>
+
+          <label class="form-check">
+            <input type="checkbox">
+            <span>Autorizo o uso dos meus dados para retorno sobre este contato, conforme a <a href="#">Política de Privacidade</a> da Accous.</span>
+          </label>
+
+          <button type="button" class="form-submit">
+            <span>Enviar mensagem</span>
+            <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg width="40" height="40" aria-hidden="true"><use href="#accous-icon"/></svg>
+          <div>
+            <div class="footer-brand-name">Accous</div>
+            <div class="footer-brand-tag">be wise</div>
+          </div>
+        </div>
+        <p class="footer-description">Contabilidade premium com atendimento em todo o Brasil. Sede operacional em Belo Horizonte, MG.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/accous.oficial" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="16" height="16" aria-hidden="true"><use href="#i-instagram"/></svg>
+          </a>
+          <a href="https://wa.me/5531992280076" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg width="16" height="16" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+          </a>
+          <a href="mailto:contato@accous.com.br" aria-label="E-mail">
+            <svg width="16" height="16" aria-hidden="true"><use href="#i-mail"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Navegação</h4>
+        <ul class="footer-links">
+          <li><a href="#">Início</a></li>
+          <li><a href="#a-accous">A Accous</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#segmentos">Para seu negócio</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#">Área do cliente</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Serviços</h4>
+        <ul class="footer-links">
+          <li><a href="#">Contabilidade Consultiva</a></li>
+          <li><a href="#">Folha e eSocial</a></li>
+          <li><a href="#">Planejamento Tributário</a></li>
+          <li><a href="#">Monitoramento Fiscal</a></li>
+          <li><a href="#">Obrigações Acessórias</a></li>
+          <li><a href="#">Abertura e Regularização</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Contato</h4>
+        <p class="footer-contact-item">Rua Fausto Alvim, 371 · Sala 4403<br>Belo Horizonte, MG</p>
+        <p class="footer-contact-item">(31) 9 9228-0076</p>
+        <p class="footer-contact-item">contato@accous.com.br</p>
+        <p class="footer-contact-item">Segunda a sexta, 8h às 18h</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 Accous · CNPJ 52.005.919/0001-71 · CRC-MG 129721/O</div>
+      <div class="footer-bottom-links">
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos de Uso</a>
+        <span>Feito em Belo Horizonte</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5531992280076?text=Ol%C3%A1%2C%20Accous.%20Cheguei%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20contabilidade." target="_blank" rel="noopener" class="whatsapp-float" id="waFloat" aria-label="Abrir WhatsApp">
+  <svg width="28" height="28" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+  <span class="whatsapp-tooltip">Fale com a Accous</span>
+</a>
+
+<!-- SCRIPTS -->
+<script>
+// Animações por scroll (Intersection Observer)
+const revealElements = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+revealElements.forEach(el => revealObserver.observe(el));
+
+// Navbar scroll logic
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+// Mobile Menu
+const mobileToggle = document.getElementById('mobileToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
+
+function toggleMenu(isOpen) {
+  mobileMenu.classList.toggle('active', isOpen);
+  mobileToggle.setAttribute('aria-expanded', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+
+mobileToggle.addEventListener('click', () => toggleMenu(true));
+mobileClose.addEventListener('click', () => toggleMenu(false));
+mobileMenu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => toggleMenu(false));
+});
+
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isActive = item.classList.contains('active');
+
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+    if (!isActive) {
+      item.classList.add('active');
+    }
+  });
+});
+
+// WhatsApp Tooltip delay
+let waTooltipShown = false;
+window.addEventListener('scroll', () => {
+  if (!waTooltipShown && window.scrollY > 400) {
+    const wa = document.getElementById('waFloat');
+    wa.classList.add('tooltip-visible');
+    setTimeout(() => wa.classList.remove('tooltip-visible'), 3000);
+    waTooltipShown = true;
+  }
+}, { passive: true });
+</script>
+
+</body>
+</html>
