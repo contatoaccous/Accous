@@ -102,10 +102,12 @@ export default async function handler(req, res) {
       text
     });
     if (error) {
-      return res.status(502).json({ error: 'Falha ao enviar e-mail' });
+      console.error('[Resend error]', JSON.stringify(error));
+      return res.status(502).json({ error: 'Falha ao enviar e-mail', detail: error.message || error.name });
     }
     return res.status(200).json({ ok: true });
   } catch (err) {
-    return res.status(500).json({ error: 'Erro interno' });
+    console.error('[contato catch]', err?.message, err?.stack);
+    return res.status(500).json({ error: 'Erro interno', detail: err?.message });
   }
 }
